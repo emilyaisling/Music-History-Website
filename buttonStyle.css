@@ -1,0 +1,9 @@
+.buttons a{
+    white-space: nowrap;
+    text-decoration: none;
+    color: palevioletred;
+    padding: 15px;
+}
+.buttons i{
+    padding: 4px;
+}

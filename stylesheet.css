@@ -1,0 +1,186 @@
+body, ul, li, h1, h2, a{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+}
+header h1{
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    color: palevioletred;
+    border: 6px double palevioletred;
+}
+.banner{
+    position: relative;
+}
+.banner img{
+    width: 100%;
+}
+.banner .title{
+    position: absolute;
+    background-color: whitesmoke;
+    padding: 2%;
+    left: 10%;
+    top: 50%;
+    border: 6px double palevioletred;
+}
+.banner .title h2{
+    color: palevioletred;
+    font-size: 30px;
+}
+.home-nav{
+    background-color: whitesmoke;
+    padding: 20px;
+    border: 4px double palevioletred;
+    border-left: 0;
+    border-right: 0;
+}
+.home-nav ul{
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+.home-nav li{
+    width: 20%;
+    display: inline-block;
+}
+.home-nav li a{
+    text-decoration: none;
+    color: palevioletred;
+}
+main{
+    max-width: 100%;
+    margin: 80px auto;
+    padding: 0 40px;
+}
+main h2{
+    color: rgb(153, 74, 101);
+    font-size: 30px;
+}
+article h3{
+    color: rgb(196, 67, 110);
+}
+article p{
+    line-height: 1.5em;
+    color: rgb(83, 36, 52);
+}
+ul.overview li{
+    line-height: 1.5em;
+    color: rgb(83, 36, 52);
+}
+.images{
+    text-align: center;
+    white-space: nowrap;
+}
+.images li{
+    display: inline-block;
+    width: 40%;
+    margin: 20px 5%;
+    color: rgb(83, 36, 52);
+}
+.images li img{
+    max-width: 100%;
+}
+.images .palestrina{
+    width: 50%;
+}
+.images .bach, .images .vivaldi{
+    width: 60%;
+}
+.images .mozart{
+    width: 50%;
+}
+.images .haydn{
+    width: 55%;
+}
+.images .berlioz, .images .tchaikovsky{
+    width: 60%;
+}
+.images .schoenberg, .images .stravinsky{
+    width: 50%;
+}
+.slide{
+    width: 30%;
+}
+.slideshow{
+    text-align: center;
+}
+.instruments{
+    white-space: nowrap;
+    text-align: center;
+}
+.instruments li{
+    display: inline-block;
+    width: 20%;
+    margin: 10px 2%;
+    color: rgb(83, 36, 52);
+}
+.instruments li img{
+    max-width: 100%;
+}
+.instruments .violin, .instruments .tuba, .instruments .baroqueViolin{
+    width: 70%;
+}
+div{
+    border: 3px double palevioletred;
+    border-left: 0;
+    border-right: 0;
+}
+section.references{
+    display: inline-block;
+    padding: 0 40px;
+    color: rgb(83, 36, 52);
+}
+.references li{
+    font-size: 10px;
+}
+section.mailing-list{
+    background-color: whitesmoke;
+    text-align: center;
+    color: rgb(83, 36, 52);
+    padding: 50px 10px;
+}
+form input{
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 6px double rgb(83, 36, 52);
+    border-radius: 28px;
+}
+form input:focus{
+    border: 6px double palevioletred;
+    outline: none;
+}
+form input:valid
+{
+    border: 6px double rgb(106, 182, 106);
+}
+footer{
+    background-color: palevioletred;
+    padding: 5px;
+    text-align: center;
+    color: whitesmoke;
+}
+P::selection, li::selection, h1::selection, h2::selection, h3::selection, h4::selection, img::selection{
+    background-color: palevioletred;
+    color: whitesmoke;
+}
+nav li a:hover{
+    text-decoration: underline;
+}
+.slideshow img:hover{
+    position: relative;
+    bottom: 1px;
+    padding: 2px;
+    border: 4px double palevioletred;
+}
