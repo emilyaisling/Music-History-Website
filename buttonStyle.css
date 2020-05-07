@@ -7,3 +7,16 @@
 .buttons i{
     padding: 4px;
 }
+tr{
+    color: rgb(83, 36, 52);
+}
+.content{
+    width: 1000px;
+	margin: 25px 0;
+    padding: 25px;
+    border: 4px double palevioletred;
+	background-color: whitesmoke;
+}
+.content > h2 table td{
+    padding: 5px;
+}
