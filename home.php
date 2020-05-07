@@ -61,13 +61,13 @@ if (!isset($_SESSION['loggedin']))
         <br><br>
 
         <section class="slideshow">
-            <a id="r" href="/renaissance.html"><img src="images/palestrinaCrop.jpg" class="slide"></a>
-            <a id="b" href="/baroque.html"><img src="images/bachCrop.jpg" class="slide"></a>
-            <a id="b" href="/baroque.html"><img src="images/vivaldiCrop.jpg" class="slide"></a>
-            <a id="c" href="/classical.html"><img src="images/mozartCrop.jpg" class="slide"></a>
-            <a id="c" href="/classical.html"><img src="images/Joseph-HaydnCrop.jpg" class="slide"></a>
-            <a id="ro" href="/romantic.html"><img src="images/tchaikovskyCrop.jpg" class="slide"></a>
-            <a id="ro" href="/romantic.html"><img src="images/berliozCrop.jpg" class="slide"></a>
+            <a id="r" href="/Website/renaissance.html"><img src="images/palestrinaCrop.jpg" class="slide"></a>
+            <a id="b" href="/Website/baroque.html"><img src="images/bachCrop.jpg" class="slide"></a>
+            <a id="b" href="/Website/baroque.html"><img src="images/vivaldiCrop.jpg" class="slide"></a>
+            <a id="c" href="/Website/classical.html"><img src="images/mozartCrop.jpg" class="slide"></a>
+            <a id="c" href="/Website/classical.html"><img src="images/Joseph-HaydnCrop.jpg" class="slide"></a>
+            <a id="ro" href="/Website/romantic.html"><img src="images/tchaikovskyCrop.jpg" class="slide"></a>
+            <a id="ro" href="/Website/romantic.html"><img src="images/berliozCrop.jpg" class="slide"></a>
         </section>
     </main>
 
