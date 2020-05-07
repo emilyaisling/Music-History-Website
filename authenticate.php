@@ -47,4 +47,5 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 
     $stmt->close();
 }
+
 ?>

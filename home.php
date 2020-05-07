@@ -68,6 +68,8 @@ if (!isset($_SESSION['loggedin']))
             <a id="c" href="/Website/classical.html"><img src="images/Joseph-HaydnCrop.jpg" class="slide"></a>
             <a id="ro" href="/Website/romantic.html"><img src="images/tchaikovskyCrop.jpg" class="slide"></a>
             <a id="ro" href="/Website/romantic.html"><img src="images/berliozCrop.jpg" class="slide"></a>
+            <a id="t" href="/Website/twentiethcentury.html"><img src="images/schoenbergCrop.jpg" class="slide"></a>
+            <a id="t" href="/Website/twentiethcentury.html"><img src="images/stravinskyCrop.jpeg" class="slide"></a>
         </section>
     </main>
 
@@ -76,7 +78,7 @@ if (!isset($_SESSION['loggedin']))
         <p>Keep up to date with the latest research developments, historical findings, events and concert dates in our monthly magazine. Your first issue 
         includes a free download of our 'Best of the Romantic Era' mix with sheet music.</p>
         
-        <form>
+        <form action="join.php" method="POST">
         <input type="email" name="email" placeholder="Enter your email" required>
         </form>
     </section>

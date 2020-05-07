@@ -1,9 +1,3 @@
-let theForm = document.querySelector('form');
-theForm.onsubmit = function()
-{
-    alert('Thank you for joining!');
-};
-
 let slideIndex = 0;
 
 function changeSlide()
