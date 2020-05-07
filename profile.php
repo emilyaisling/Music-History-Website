@@ -29,7 +29,7 @@ $stmt->close();
 <head>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <link rel="stylesheet" href="buttonStyle.css">
+    <link rel="stylesheet" href="extraStyle.css">
     <title>Music History</title>
 </head>
 
