@@ -42,23 +42,40 @@ if (isset($_GET['page_id']))
 {
     if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
     {
-        if ($stmt = $pdo->prepare('SELECT id, password FROM accounts WHERE username = ?')) 
+        $selectedUsername = $_POST['username'];
+        if ($stmt = $pdo->prepare('SELECT id, password FROM accounts WHERE username = :username')) 
         {
-            $stmt->bind_param('s', $_POST['username']);
+            $stmt->bindParam(':username', $selectedUsername);
             $stmt->execute();
-            $stmt->store_result();
-            if ($stmt->row_count > 0)
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            if ($result)
             {
-                $user = $_SESSION['id'];
-                $stmt = $pdo->prepare("INSERT INTO comments (page_id, user_id, username, content, rating, submit_date) VALUES (?,$user,?,?,?,NOW())");
-                $stmt->execute([$_GET['page_id'], $_POST['username'], $_POST['content'], $_POST['rating']]);
-                exit('Your comment has been submitted!');
+                if ($selectedUsername == $_SESSION['name'])
+                {
+                    $user = $_SESSION['id'];
+                    $stmt = $pdo->prepare("INSERT INTO comments (page_id, user_id, username, content, rating, submit_date) VALUES (?,$user,?,?,?,NOW())");
+                    $stmt->execute([$_GET['page_id'], $_POST['username'], $_POST['content'], $_POST['rating']]);
+                    exit('Your comment has been submitted!');
+                }
+                else
+                {
+                    echo 'Incorrect username';
+                }
+            }
+            else
+            {
+                echo 'Username does not exist';
             }
         }
+        else
+        {
+            echo 'Failed to prepare statement';
+        }
     }
+
     $stmt = $pdo->prepare('SELECT * FROM comments WHERE page_id = ? ORDER BY submit_date DESC');
     $stmt->execute([$_GET['page_id']]);
-    $comments = $stmt->fetch_all(PDO::FETCH_ASSOC);
+    $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     $stmt = $pdo->prepare('SELECT AVG(rating) AS overall_rating, COUNT(*) AS total_comments FROM comments WHERE page_id = ?');
     $stmt->execute([$_GET['page_id']]);
@@ -70,28 +87,30 @@ else
 }
 ?>
 
-<div class="overall_rating">
+<section class="overall_rating">
     <span class="num"><?=number_format($comments_info['overall_rating'], 1)?></span>
     <span class="stars"><?=str_repeat('&#9733;', round($comments_info['overall_rating']))?></span>
     <span class="total"><?=$comments_info['total_comments']?> comments</span>
-</div>
+</section>
 <a href="#" class="write_comment_btn">Write Comment</a>
-<div class="write_comment">
+<section class="write_comment">
     <form>
         <input type="text" name="username" placeholder="Username" required>
         <input type="number" name="rating" min="1" max="5" placeholder="Rating (1-5)" required>
         <textarea name="content" placeholder="Write your comment here..." required></textarea>
         <button type="submit">Post Comment</button>
     </form>
-</div>
+</section>
 
-<?php foreach ($comments as $comment): ?>
-<div class="comment">
-    <h3 class="username"><?=htmlspecialchars($comment['username'], ENT_QUOTES)?></h3>
-    <div>
-        <span class="rating"><?=str_repeat('&#9733;', $comment['rating'])?></span>
-        <span class="date"><?=time_elapsed_string($comment['submit_date'])?></span>
+<?php if (is_array($comments)): ?>
+    <?php foreach ($comments as $comment): ?>
+    <div class="comment">
+        <h3 class="username"><?=htmlspecialchars($comment['username'], ENT_QUOTES)?></h3>
+        <div>
+            <span class="rating"><?=str_repeat('&#9733;', $comment['rating'])?></span>
+            <span class="date"><?=time_elapsed_string($comment['submit_date'])?></span>
+        </div>
+        <p class="content"><?=htmlspecialchars($comment['content'], ENT_QUOTES)?></p>
     </div>
-    <p class="content"><?=htmlspecialchars($comment['content'], ENT_QUOTES)?></p>
-</div>
-<?php endforeach ?>
+    <?php endforeach ?>
+<?php endif; ?>

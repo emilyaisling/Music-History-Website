@@ -23,6 +23,7 @@ if (!isset($_SESSION['loggedin']))
         <section class='buttons'>
             <br>
             <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
+            <a href="comments.html"><i class="fas fa-comment"></i>Comments</a>
             <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
         </section>
     </header>

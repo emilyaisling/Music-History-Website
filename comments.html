@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="extraStyle.css">
+    <link rel="stylesheet" href="commentStyle.css">
+    <title>Music History</title>
+</head>
+
+<body>
+    <header>
+        <h1>Music History</h1>
+        <section class='buttons'>
+            <br>
+            <a href="home.php"><i class="fas fa-home"></i>Home</a>
+            <a href="profile.php"><i class="fas fa-user"></i>Profile</a>
+            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+        </section>
+    </header>
+
+    <section class="banner">
+        <img src="images/webBanner.jpg" alt="Butterfly and clock">
+        <div class="title">
+            <h2>Comments Page</h2>
+        </div>
+    </section>
+
+    <nav class="home-nav">
+        <ul>
+            <li><a id="r" href="/Website/renaissance.html">Renaissance</a></li>
+            <li><a id="b" href="/Website/baroque.html">Baroque</a></li>
+            <li><a id="c" href="/Website/classical.html">Classical</a></li>
+            <li><a id="ro" href="/Website/romantic.html">Romantic</a></li>
+            <li><a id="t" href="/Website/twentiethcentury.html">Twentieth Century</a></li>
+        </ul>
+    </nav>
+    <section class="content home">
+        <h2>Reviews</h2>
+        <p>Check out the below reviews for the website.</p>
+        <section class="comments"></section>
+        <script>
+            const comments_page_id = 1;
+            fetch("comments.php?page_id=?" + comments_page_id).then(response => response.text()).then(data =>
+            {
+                document.querySelector(".comments").innerHTML = data;
+                document.querySelector(".comments .write_comment_btn").onclick = event =>
+                {
+                    event.preventDefault();
+                    document.querySelector(".comments .write_comment").style.display = 'block';
+                    document.querySelector(".comments .write_comment input[name='name']").focus();
+                };
+                document.querySelector(".comments .write_comment form").onsubmit = event =>
+                {
+                    event.preventDefault();
+                    fetch("comments.php?page_id=" + comments_page_id, 
+                    {
+                        method: 'POST', 
+                        body: new FormData(document.querySelector(".comments .write_comment form"))
+                    }).then(response => response.text()).then(data => 
+                    {
+                        document.querySelector(".comments .write_comment").innerHTML = data;
+                    });
+                };
+            });
+        </script>
+    </section>
+</body>
+</html>
