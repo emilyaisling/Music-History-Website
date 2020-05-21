@@ -61,18 +61,19 @@
     font-size: 18px;
     color: rgb(153, 74, 101);
 }
-.reviews .review .rating {
+.comments .comment .rating {
     letter-spacing: 2px;
     font-size: 22px;
     color: palevioletred;
 }
-.reviews .review .date {
+.comments .comment .date {
     color: rgb(153, 74, 101);
     font-size: 14px;
 }
-.reviews .review .content {
+.comments .comment .contents {
     padding: 5px 0;
 }
-.reviews .review:last-child {
+.comments .comment:last-child {
     border-bottom: 0;
 }
+

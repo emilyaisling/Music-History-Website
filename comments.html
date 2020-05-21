@@ -36,13 +36,12 @@
             <li><a id="t" href="/Website/twentiethcentury.html">Twentieth Century</a></li>
         </ul>
     </nav>
-    <section class="content home">
+    <div class="content">
         <h2>Reviews</h2>
         <p>Check out the below reviews for the website.</p>
         <section class="comments"></section>
         <script>
-            const comments_page_id = 1;
-            fetch("comments.php?page_id=?" + comments_page_id).then(response => response.text()).then(data =>
+            fetch("comments.php").then(response => response.text()).then(data =>
             {
                 document.querySelector(".comments").innerHTML = data;
                 document.querySelector(".comments .write_comment_btn").onclick = event =>
@@ -54,7 +53,7 @@
                 document.querySelector(".comments .write_comment form").onsubmit = event =>
                 {
                     event.preventDefault();
-                    fetch("comments.php?page_id=" + comments_page_id, 
+                    fetch("comments.php", 
                     {
                         method: 'POST', 
                         body: new FormData(document.querySelector(".comments .write_comment form"))
@@ -65,6 +64,6 @@
                 };
             });
         </script>
-    </section>
+    </div>
 </body>
 </html>

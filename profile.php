@@ -39,6 +39,7 @@ $stmt->close();
         <section class='buttons'>
             <br>
             <a href="home.php"><i class="fas fa-home"></i>Home</a>
+            <a href="comments.html"><i class="fas fa-comment"></i>Comments</a>
             <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
         </section>
     </header>
