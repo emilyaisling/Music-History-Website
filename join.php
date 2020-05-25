@@ -24,11 +24,21 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE email = ?'))
 
     if ($stmt->num_rows > 0)
     {
-        echo '<script>alert("Thank you for joining!");document.location="home.php"</script>';
+        $userID = $_SESSION['id'];
+        $stmt = $con->prepare("UPDATE accounts SET mailing_list = 'Y' WHERE id = $userID AND mailing_list != 'Y'"); 
+        $stmt->execute();
+        if (mysqli_affected_rows($con) == 1)
+        {
+            echo '<script>alert("Thank you for joining!");document.location="home.php"</script>';
+        }
+        else if (mysqli_affected_rows($con) == 0)
+        {
+            echo '<script>alert("You have already signed up.");document.location="home.php"</script>';
+        }
     }
     else
     {
-        echo '<script>alert("Invalid email adress");document.location="home.php"</script>';
+        echo '<script>alert("Invalid email adress.");document.location="home.php"</script>';
     }
 }
 ?>
