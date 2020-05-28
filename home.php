@@ -6,27 +6,9 @@ if (!isset($_SESSION['loggedin']))
     exit;
 }
 ?>
-<!DOCTYPE html>
-<html>
-
-<head>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-    <link rel="stylesheet" href="extraStyle.css">
-    <title>Music History</title>
-</head>
-
-<body>
-    
-    <header>
-        <h1>Music History</h1>
-        <section class='buttons'>
-            <br>
-            <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-            <a href="comments.html"><i class="fas fa-comment"></i>Comments</a>
-            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
-        </section>
-    </header>
+<?php
+    include('header.html');
+?>
 
     <section class="banner">
         <img src="images/webBanner.jpg" alt="Butterfly and clock">

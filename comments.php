@@ -1,10 +1,11 @@
 <?php
 session_start();
 date_default_timezone_set('GMT');
+$error = false;
 
 $DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
+$DATABASE_USER = 'emilyaisling';
+$DATABASE_PASS = 'WesternArtMusic1';
 $DATABASE_NAME = 'phplogin';
 
 try 
@@ -54,16 +55,17 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
                 $user = $_SESSION['id'];
                 $stmt = $pdo->prepare("INSERT INTO comments (user_id, username, content, rating, submit_date) VALUES ($user,?,?,?,NOW())");
                 $stmt->execute([$_POST['username'], $_POST['content'], $_POST['rating']]);
+                $error = false;
                 exit('Your comment has been submitted!');
             }
             else
             {
-                echo 'Incorrect username';
+                $error = true;
             }
         }
         else
         {
-            echo 'Username does not exist';
+            $error = true;
         }
     }
     else
@@ -71,16 +73,21 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
         echo 'Failed to prepare statement';
     }
 }
-    $stmt = $pdo->prepare('SELECT * FROM comments ORDER BY submit_date DESC');
-    $stmt->execute();
-    $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    if($error == false)
+    {
+        $stmt = $pdo->prepare('SELECT * FROM comments ORDER BY submit_date DESC');
+        $stmt->execute();
+        $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    $stmt = $pdo->prepare('SELECT AVG(rating) AS overall_rating, COUNT(*) AS total_comments FROM comments');
-    $stmt->execute();
-    $comments_info = $stmt->fetch(PDO::FETCH_ASSOC);
-    $display = $comments_info['total_comments'] > 1 ? ' comments' : 'comment'
+        $stmt = $pdo->prepare('SELECT AVG(rating) AS overall_rating, COUNT(*) AS total_comments FROM comments');
+        $stmt->execute();
+        $comments_info = $stmt->fetch(PDO::FETCH_ASSOC);
+        $display = $comments_info['total_comments'] > 1 ? ' comments' : ' comment';
+
+    }
 ?>
 
+<?php if ($error == false): ?>
 <section class="overall_rating">
     <span class="num"><?=number_format($comments_info['overall_rating'], 1)?></span>
     <span class="stars"><?=str_repeat('&#9733;', round($comments_info['overall_rating']))?></span>
@@ -96,7 +103,6 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
     </form>
 </section>
 
-
 <?php foreach ($comments as $comment): ?>
 <section class="comment">
     <h3 class="username"><?=htmlspecialchars($comment['username'], ENT_QUOTES)?></h3>
@@ -106,4 +112,7 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
     </section>
     <p class="contents"><?=htmlspecialchars($comment['content'], ENT_QUOTES)?></p>
 </section>
-<?php endforeach ?> 
+<?php endforeach ?>
+<?php else: ?>
+    <p class="error"><?php echo htmlspecialchars('Incorrect username.')?><p>
+<?php endif ?>
