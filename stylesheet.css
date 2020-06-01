@@ -12,12 +12,14 @@ header{
     z-index: 1;
     top: 0px;
     left: 0px;
+    border-top: 2px ridge rgb(153, 74, 101);
+    border-bottom: 2px ridge rgb(153, 74, 101);
 }
 header h1{
     display: inline-block;
     padding: 10px;
     margin: 10px;
-    color: palevioletred;
+    color: rgb(153, 74, 101);
     border: 6px double palevioletred;
 }
 .banner{
@@ -35,7 +37,7 @@ header h1{
     border: 6px double palevioletred;
 }
 .banner .title h2{
-    color: palevioletred;
+    color: rgb(153, 74, 101);
     font-size: 30px;
 }
 .home-nav{
@@ -57,7 +59,7 @@ header h1{
 }
 .home-nav li a{
     text-decoration: none;
-    color: palevioletred;
+    color: rgb(153, 74, 101);
 }
 main{
     max-width: 100%;

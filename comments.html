@@ -29,41 +29,43 @@
 
     <nav class="home-nav">
         <ul>
-            <li><a id="r" href="/Website/renaissance.html">Renaissance</a></li>
-            <li><a id="b" href="/Website/baroque.html">Baroque</a></li>
-            <li><a id="c" href="/Website/classical.html">Classical</a></li>
-            <li><a id="ro" href="/Website/romantic.html">Romantic</a></li>
-            <li><a id="t" href="/Website/twentiethcentury.html">Twentieth Century</a></li>
+            <li><a id="r" href="/Website/renaissance.php">Renaissance</a></li>
+            <li><a id="b" href="/Website/baroque.php">Baroque</a></li>
+            <li><a id="c" href="/Website/classical.php">Classical</a></li>
+            <li><a id="ro" href="/Website/romantic.php">Romantic</a></li>
+            <li><a id="t" href="/Website/twentiethcentury.php">Twentieth Century</a></li>
         </ul>
     </nav>
-    <div class="content">
-        <h2>Reviews</h2>
-        <p>Check out the below reviews for the website.</p>
-        <section class="comments"></section>
-        <script>
-            fetch("comments.php").then(response => response.text()).then(data =>
-            {
-                document.querySelector(".comments").innerHTML = data;
-                document.querySelector(".comments .write_comment_btn").onclick = event =>
+    <section class="contents">
+        <div class="content">
+            <h2>Reviews</h2>
+            <p>Check out the below reviews for the website.</p>
+            <section class="comments"></section>
+            <script>
+                fetch("comments.php").then(response => response.text()).then(data =>
                 {
-                    event.preventDefault();
-                    document.querySelector(".comments .write_comment").style.display = 'block';
-                    document.querySelector(".comments .write_comment input[name='name']").focus();
-                };
-                document.querySelector(".comments .write_comment form").onsubmit = event =>
-                {
-                    event.preventDefault();
-                    fetch("comments.php", 
+                    document.querySelector(".comments").innerHTML = data;
+                    document.querySelector(".comments .write_comment_btn").onclick = event =>
                     {
-                        method: 'POST', 
-                        body: new FormData(document.querySelector(".comments .write_comment form"))
-                    }).then(response => response.text()).then(data => 
+                        event.preventDefault();
+                        document.querySelector(".comments .write_comment").style.display = 'block';
+                        document.querySelector(".comments .write_comment input[name='name']").focus();
+                    };
+                    document.querySelector(".comments .write_comment form").onsubmit = event =>
                     {
-                        document.querySelector(".comments .write_comment").innerHTML = data;
-                    });
-                };
-            });
-        </script>
-    </div>
+                        event.preventDefault();
+                        fetch("comments.php", 
+                        {
+                            method: 'POST', 
+                            body: new FormData(document.querySelector(".comments .write_comment form"))
+                        }).then(response => response.text()).then(data => 
+                        {
+                            document.querySelector(".comments .write_comment").innerHTML = data;
+                        });
+                    };
+                });
+            </script>
+        </div>
+    </section>
 </body>
 </html>

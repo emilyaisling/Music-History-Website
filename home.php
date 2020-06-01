@@ -19,11 +19,11 @@ if (!isset($_SESSION['loggedin']))
 
     <nav class="home-nav">
         <ul>
-            <li><a id="r" href="/Website/renaissance.html">Renaissance</a></li>
-            <li><a id="b" href="/Website/baroque.html">Baroque</a></li>
-            <li><a id="c" href="/Website/classical.html">Classical</a></li>
-            <li><a id="ro" href="/Website/romantic.html">Romantic</a></li>
-            <li><a id="t" href="/Website/twentiethcentury.html">Twentieth Century</a></li>
+            <li><a id="r" href="/Website/renaissance.php">Renaissance</a></li>
+            <li><a id="b" href="/Website/baroque.php">Baroque</a></li>
+            <li><a id="c" href="/Website/classical.php">Classical</a></li>
+            <li><a id="ro" href="/Website/romantic.php">Romantic</a></li>
+            <li><a id="t" href="/Website/twentiethcentury.php">Twentieth Century</a></li>
         </ul>
     </nav>
 
@@ -44,17 +44,28 @@ if (!isset($_SESSION['loggedin']))
         <br><br>
 
         <section class="slideshow">
-            <a id="r" href="/Website/renaissance.html"><img src="images/palestrinaCrop.jpg" class="slide"></a>
-            <a id="b" href="/Website/baroque.html"><img src="images/bachCrop.jpg" class="slide"></a>
-            <a id="b" href="/Website/baroque.html"><img src="images/vivaldiCrop.jpg" class="slide"></a>
-            <a id="c" href="/Website/classical.html"><img src="images/mozartCrop.jpg" class="slide"></a>
-            <a id="c" href="/Website/classical.html"><img src="images/Joseph-HaydnCrop.jpg" class="slide"></a>
-            <a id="ro" href="/Website/romantic.html"><img src="images/tchaikovskyCrop.jpg" class="slide"></a>
-            <a id="ro" href="/Website/romantic.html"><img src="images/berliozCrop.jpg" class="slide"></a>
-            <a id="t" href="/Website/twentiethcentury.html"><img src="images/schoenbergCrop.jpg" class="slide"></a>
-            <a id="t" href="/Website/twentiethcentury.html"><img src="images/stravinskyCrop.jpeg" class="slide"></a>
+            <a id="r" href="/Website/renaissance.php"><img src="images/palestrinaCrop.jpg" class="slide"></a>
+            <a id="b" href="/Website/baroque.php"><img src="images/bachCrop.jpg" class="slide"></a>
+            <a id="b" href="/Website/baroque.php"><img src="images/vivaldiCrop.jpg" class="slide"></a>
+            <a id="c" href="/Website/classical.php"><img src="images/mozartCrop.jpg" class="slide"></a>
+            <a id="c" href="/Website/classical.php"><img src="images/Joseph-HaydnCrop.jpg" class="slide"></a>
+            <a id="ro" href="/Website/romantic.php"><img src="images/tchaikovskyCrop.jpg" class="slide"></a>
+            <a id="ro" href="/Website/romantic.php"><img src="images/berliozCrop.jpg" class="slide"></a>
+            <a id="t" href="/Website/twentiethcentury.php"><img src="images/schoenbergCrop.jpg" class="slide"></a>
+            <a id="t" href="/Website/twentiethcentury.php"><img src="images/stravinskyCrop.jpeg" class="slide"></a>
         </section>
     </main>
+
+    <section class="poll">
+        <h3>Which is your favourite music era?</h3>
+        <form>
+            Renaissance: <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
+            Baroque: <input type="radio" name="vote" value="1" onclick="getVote(this.value)"><br>
+            Clasical: <input type="radio" name="vote" value="2" onclick="getVote(this.value)"><br>
+            Romantic: <input type="radio" name="vote" value="3" onclick="getVote(this.value)"><br>
+            Twentieth Century: <input type="radio" name="vote" value="4" onclick="getVote(this.value)"><br>
+        </form>
+    </section>
 
     <section class="mailing-list">
         <h2>Join the music community</h2>
@@ -71,6 +82,7 @@ if (!isset($_SESSION['loggedin']))
     </footer>
 
 <script src="script.js"></script>
+<script src="poll.js"></script>
 </body>
 
 </html>

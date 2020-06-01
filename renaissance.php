@@ -12,10 +12,10 @@
     <nav class="home-nav">
         <ul>
             <li><a href="/Website/home.php">Home</a></li>
-            <li><a href="/Website/baroque.html">Baroque</a></li>
-            <li><a href="/Website/classical.html">Classical</a></li>
-            <li><a href="/Website/romantic.html">Romantic</a></li>
-            <li><a href="/Website/twentiethcentury.html">Twentieth Century</a></li>
+            <li><a href="/Website/baroque.php">Baroque</a></li>
+            <li><a href="/Website/classical.php">Classical</a></li>
+            <li><a href="/Website/romantic.php">Romantic</a></li>
+            <li><a href="/Website/twentiethcentury.php">Twentieth Century</a></li>
         </ul>
     </nav>
 

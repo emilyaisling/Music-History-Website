@@ -9,8 +9,8 @@
     color: palevioletred;
     padding: 0 5px 0 10px;
 }
-.reviews .overall_rating .total {
-    color: rgb(153, 74, 101);
+.comments .overall_rating .total {
+    color: rgb(83, 36, 52);
     font-size: 14px;
 }
 .comments .write_comment_btn, .comments .write_comment button {
@@ -73,6 +73,12 @@
 .comments .comment .contents {
     padding: 5px 0;
 }
+.content h2{
+    color: rgb(153, 74, 101);
+}
+.content p{
+    color: rgb(83, 36, 52);
+}
 .comments .comment:last-child {
     border-bottom: 0;
 }
@@ -80,4 +86,11 @@
     font-size: 20px;
     font-weight: bold;
     color: rgb(212, 44, 66);
+}
+div.content{
+    display: inline-block;
+    text-align: left;
+}
+section.contents{
+    text-align: center;
 }

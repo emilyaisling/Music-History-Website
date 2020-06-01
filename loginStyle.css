@@ -54,6 +54,9 @@ body{
     transition: background-color 0.2s;
     cursor: pointer;
 }
+.login form input[class="log"]:focus{
+    outline: none;
+}
 .login form input[type="submit"]:hover{
     background-color: rgb(187, 97, 127);
     transition: background-color 0.2s;

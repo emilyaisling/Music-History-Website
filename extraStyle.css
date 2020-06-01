@@ -1,7 +1,7 @@
 .buttons a{
     white-space: nowrap;
     text-decoration: none;
-    color: palevioletred;
+    color: rgb(153, 74, 101);
     padding: 15px;
 }
 .buttons i{
