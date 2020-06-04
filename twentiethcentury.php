@@ -19,7 +19,8 @@
         </ul>
     </nav>
 
-    <main>
+    <section class="contain">
+    <main class="contained">
         <h2>Twentieth Century: 1900 - 1999</h2>
         <article class="over-view">
             <h3>Overview</h3>
@@ -43,7 +44,7 @@
             <p>Tonal early compositions, e.g. Verklärte Nacht (1899), although beginnings of harmonic
                 innovation present. Contains an uncategorised inverted ninth chord; rejected by
                 listeners. (Kuiper & Newlin, 1998).
-                Dispensed with tonality in Drei Klavierstücke (1909). (ibid.)
+                Dispensed with tonality in Drei Klavierstücke (1909). (ibid.) <br><br>
                 Twelve tone system: none of the tones have greater focus than another; no tonal centre,
                 e.g. Fünf Klavierstücke (1923). (Lumen Learning).
                 Hostility towards his approach to music; newspaper debates. (Fox, 2009).
@@ -65,7 +66,7 @@
                 Story of old pagan Russian ritual: young girl chosen for sacrifice, dances herself to
                 death. (ClassicFM)
                 Confrontational: relentless, pulsing, polymetric and additive rhythms.
-                Dissonance; uncomfortable atmosphere. (Schwarm, 2013)
+                Dissonance; uncomfortable atmosphere. (Schwarm, 2013) <br><br>
                 Different to any previous ballet, as Stravinsky said: “Very little immediate
                 tradition lies behind The Rite of Spring – and no theory.” (Service, 2013)
                 Traditional and innovative: melodies from folk songs, although new to Parisian
@@ -79,6 +80,7 @@
 
         <article class="instruments">
             <h3>Instruments</h3>
+            <br>
             <ul>
                 <li><img src="images/tape.jpg" alt="tape"><br>Magnetic Tape</li>
                 <li><img src="images/noise.jpg" alt="noise"><br>Noise Maker</li>
@@ -88,6 +90,7 @@
         <br><br>
         <div><br><br></div>
     </main>
+    </section>
 
     <section class="references">
         <h4>References</h4>

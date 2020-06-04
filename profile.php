@@ -61,7 +61,7 @@ $stmt->close();
         </ul>
     </nav>
 
-    <main>
+    <main class="contents">
         <article class="content">
             <h2>Your account details are below:</h2><br>
                 <table>

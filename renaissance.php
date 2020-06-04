@@ -19,7 +19,8 @@
         </ul>
     </nav>
 
-    <main>
+    <section class="contain">
+    <main class="contained">
         <h2>Renaissance: 1450 - 1600</h2>
         <article class="over-view">
             <h3>Overview</h3>
@@ -38,7 +39,7 @@
         <article class="key-composer">
             <h3>Key Composer: William Byrd (1543-1623)</h3>
             <p>A Catholic, who wrote sacred choral music in Latin. Although, he was still allowed publishing priviledges by protestant Elizabeth I. (Classic Net)
-                He also wrote sacred choral music in English. (ibid.)
+                He also wrote sacred choral music in English. (ibid.) <br><br>
                 A keyboard music pioneer; his pieces were played by people in their homes, on various instruments, e.g. virginal, harpsichord and piano. (ibid.)
                 He changed the sound of keyboard music, which paved the way for later composers, e.g. Beethoven and Chopin. (Coloratura Consulting, 2013)
                 He also shaped English anthem form (protestant music, replacing the Latin motet), adding viols to usual organ accompaniment. (ibid.)
@@ -57,7 +58,7 @@
             <h3>Key Work: Missa Papae Marcelli - Giovanni Pierluigi da Palestrina (1567)</h3>
             <p>This piece was written for the pope of the time: Marcellus II. (Schwarm, 2013)
                 Imitative polyphony was used to make the words clear and understandable. One voice starts, before another five voices enter to introduce more complexity. (Schwarm, 2013)
-                This is a development from medieval era of music, as there are six voices in the piece, rather than two or three. 
+                This is a development from medieval era of music, as there are six voices in the piece, rather than two or three. <br><br>
                 The voices sing in harmony but starting lines at different times, using different rhythms.
                 This technique creates a dream-like wash of sound.
                 The final chord of each section is sung by all voices in homophony, adding emphasis and providing resolution.
@@ -70,6 +71,7 @@
 
         <article class="instruments">
             <h3>Instruments</h3>
+            <br>
             <ul>
                 <li><img src="images/viol.jpg" alt="viol"><br>Viol</li>
                 <li><img src="images/virginal.jpg" alt="virginal"><br>Virginal</li>
@@ -81,6 +83,7 @@
         <br><br>
         <div><br><br></div>
     </main>
+    </section>
 
     <section class="references">
         <h4>References</h4>

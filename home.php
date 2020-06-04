@@ -26,22 +26,24 @@ if (!isset($_SESSION['loggedin']))
             <li><a id="t" href="/Website/twentiethcentury.php">Twentieth Century</a></li>
         </ul>
     </nav>
-
-    <main>
-        <article>
+    <section class="contain">
+    <main class="contained">
+        <section class="intro">
             <h2>Introduction</h2>
             <p>Welcome to the history of western art music. Here you will find an overview of each era of music, including how the styles changed and the 
             development of new instruments. There is also a more in depth analysis of a key work from each of the five eras. Finally, you will find a short 
             personal history of one influential composer from each era, detailing why they were significant and including examples of their work fo you to go
             and listen to.</p>
-        </article>
+        </section>
 
         <ul class="images">
             <li><img src="images/sheetmusic.png" alt="sheet music"></li>
             <li><img src="images/webViolins.jpg" alt="violins"></li>
         </ul>
 
-        <br><br>
+        <br><br><br>
+        <div><br><br></div>
+        <br><br><br>
 
         <section class="slideshow">
             <a id="r" href="/Website/renaissance.php"><img src="images/palestrinaCrop.jpg" class="slide"></a>
@@ -54,17 +56,9 @@ if (!isset($_SESSION['loggedin']))
             <a id="t" href="/Website/twentiethcentury.php"><img src="images/schoenbergCrop.jpg" class="slide"></a>
             <a id="t" href="/Website/twentiethcentury.php"><img src="images/stravinskyCrop.jpeg" class="slide"></a>
         </section>
+        <br>
+        <h4>Click a composer to learn more about their era...</h4>
     </main>
-
-    <section class="poll">
-        <h3>Which is your favourite music era?</h3>
-        <form>
-            Renaissance: <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
-            Baroque: <input type="radio" name="vote" value="1" onclick="getVote(this.value)"><br>
-            Clasical: <input type="radio" name="vote" value="2" onclick="getVote(this.value)"><br>
-            Romantic: <input type="radio" name="vote" value="3" onclick="getVote(this.value)"><br>
-            Twentieth Century: <input type="radio" name="vote" value="4" onclick="getVote(this.value)"><br>
-        </form>
     </section>
 
     <section class="mailing-list">
@@ -82,7 +76,6 @@ if (!isset($_SESSION['loggedin']))
     </footer>
 
 <script src="script.js"></script>
-<script src="poll.js"></script>
 </body>
 
 </html>

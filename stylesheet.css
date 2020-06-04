@@ -1,4 +1,4 @@
-body, ul, li, h1, h2, a{
+h4, body, ul, li, h1, h2, a{
     margin: 0;
     padding: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -70,11 +70,20 @@ main h2{
     color: rgb(153, 74, 101);
     font-size: 30px;
 }
+main h4{
+    text-align: center;
+    color: rgb(83, 36, 52);
+}
 article h3{
     color: rgb(196, 67, 110);
 }
 article p{
-    line-height: 1.5em;
+    line-height: 2.0em;
+    color: rgb(83, 36, 52);
+    margin-right: 200px;
+}
+section.intro{
+    line-height: 2.0em;
     color: rgb(83, 36, 52);
 }
 ul.overview li{
@@ -182,7 +191,17 @@ nav li a:hover{
 }
 .slideshow img:hover{
     position: relative;
-    bottom: 1px;
-    padding: 2px;
-    border: 4px double palevioletred;
+    padding-right: 2px;
+    padding-left: 2px;
+    border-right: 4px double palevioletred;
+    border-left: 4px double palevioletred;
+}
+section.contain{
+    text-align: center;
+}
+main.contained{
+    display: inline-block;
+    text-align: left;
+    margin-left: 200px;
+    margin-right: 200px;
 }

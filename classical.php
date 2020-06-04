@@ -19,7 +19,8 @@
         </ul>
     </nav>
 
-    <main>
+    <section class="contain">
+    <main class="contained">
         <h2>Classical: 1759 - 1827</h2>
         <article class="over-view">
             <h3>Overview</h3>
@@ -40,7 +41,7 @@
             <h3>Key composer: Joseph Haydn (1732-1809)</h3>
             <p>Stable financial position: full time employment as Prince Ezterhazy’s Kapellmeister (musical director). (Mfiles)
                 Shaped symphony, sonata and quartet forms.
-                ‘Father of the symphony’: wrote 108, used motifs to tell stories. (Knapp et al, 1998)
+                ‘Father of the symphony’: wrote 108, used motifs to tell stories. (Knapp et al, 1998) <br><br>
                 Humour, e.g. sudden loud note in ‘Surprise’ symphony, keeping the audience awake. 
                 1760s-1770s work: ‘sturm und drang’, minor key, stress and turbulence. (New World Encyclopaedia, 2020)
                 E.g. No. 45 ‘Farewell’ (1772), his musicians’ longing for home, ends with them walking out. (Holoman, 2017)                
@@ -60,7 +61,7 @@
             <p>Mozart’s last symphony.
                 Four movements; classical symphony convention.
                 Atypical classical symphony: dramatic energy, reminiscent of Romantic style. (Schwarm, 2013).
-                ’Jupiter’: Roman god, describes grandness of the symphony. (ibid.)
+                ’Jupiter’: Roman god, describes grandness of the symphony. (ibid.) <br><br>
                 C major: triumphant, joyful sound.
                 Second movement: tender and melancholy, minor key melody.
                 Counterpoint: complexity builds to final movement, five melodies played together. (Blair, 2006)
@@ -74,6 +75,7 @@
 
         <article class="instruments">
             <h3>Instruments</h3>
+            <br>
             <ul>
                 <li><img src="images/timpani.jpg" alt="timpani"><br>Timpani</li>
                 <li><img src="images/fortepiano.jpg" alt="fortepiano"><br>Fortepiano</li>
@@ -84,6 +86,7 @@
         <br><br>
         <div><br><br></div>
     </main>
+    </section>
 
     <section class="references">
         <h4>References</h4>

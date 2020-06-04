@@ -19,7 +19,8 @@
         </ul>
     </nav>
 
-    <main>
+    <section class="contain">
+    <main class="contained">
         <h2>Baroque: 1600 - 1750</h2>
         <article class="over-view">
             <h3>Overview</h3>
@@ -42,7 +43,7 @@
             <p>Influenced composers, e.g. Mozart, Beethoven and Schumann. (Biography, 2017)
                 Old fashioned for his time; good reputation was from keyboard playing. (British Library)
                 Harmony and counterpoint experimentation: complex pieces, layers of independent melodies that work together. (ibid.)
-                Not always consonant chords. (ibid.)
+                Not always consonant chords. (ibid.) <br><br>
                 Influenced by Italian composers, e.g. Vivaldi and Corelli, for use of motor rhythms. (Lumen Learning)
                 Defining work: ‘The Well-Tempered Clavier’ (1722 and 1744), preludes and fugues in all major and minor keys. (ibid.)
                 This collection shows his command equal temperament; it works with all major and minor keys. (Schwarm, 2013)
@@ -61,7 +62,7 @@
             <h3>Key Work: The Four Seasons - Antonio Vivaldi (1725)</h3>
             <p>Four violin concerti.
                 Innovative: one of the first works of programmatic music, accompanied by poems to add to the vivid imagery of the music. (Schwarm, 2013)
-                Concerti split into three movements: fast, slow, fast.
+                Concerti split into three movements: fast, slow, fast. <br><br>
                 Spring: high pitched trills to imitate bird song
                 Winter: short, sharp strokes, harmonics to evoke images of iciness.
                 Autumn: larger intervals, swinging rhythm, images of swirling leaves.
@@ -75,6 +76,7 @@
 
         <article class="instruments">
             <h3>Instruments</h3>
+            <br>
             <ul>
                 <li><img class="baroqueViolin" src="images/baroqueViolin.jpg" alt="violin"><br>Violin</li>
                 <li><img src="images/recorder.jpg" alt="recorder"><br>Recorder</li>
@@ -85,6 +87,7 @@
         <br><br>
         <div><br><br></div>
     </main>
+    </section>
 
     <section class="references">
         <h4>References</h4>

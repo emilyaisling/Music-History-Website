@@ -19,7 +19,8 @@
         </ul>
     </nav>
 
-    <main>
+    <section class="contain">
+    <main class="contained">
         <h2>Romantic: 1820 - 1900</h2>
         <article class="over-view">
             <h3>Overview</h3>
@@ -42,7 +43,7 @@
                 repertoire standards. 
                 Ethereal quality, e.g. ‘Dance of the Sugar-Plum Fairy’, or soaring melodies, e.g. Piano
                 Concerto No. 1 B flat minor. (1875). 
-                Wide public appeal. (Poznansky, 1998). 
+                Wide public appeal. (Poznansky, 1998). <br><br>
                 Darker work, e.g. ‘Pathetique’ (1893); suffering, ending (using descending notes) in
                 despair. Rare for the end of a symphony. 
                 Evoking emotional response through melody. (Lumen Learning). 
@@ -64,7 +65,7 @@
             <p>Inspired by failed relationship with Harriet Smithson. (Jones). 
                 Recurring theme, ‘idée fixe, tells story and represents Harriet. (ibid.). 
                 Optimistic to dark and twisted; opium addles protagonist’s heartbroken mind.
-                (Schwarm, 2013). 
+                (Schwarm, 2013). <br><br>
                 Final movement: includes catholic hymn, ‘Dies Irae’; describes protagonist
                 tormented by twisted images of his love. (ibid.). 
                 Larger orchestra than usual; wider range of sounds. (Pearson). 
@@ -79,6 +80,7 @@
 
         <article class="instruments">
             <h3>Instruments</h3>
+            <br>
             <ul>
                 <li><img class="tuba" src="images/tuba.jpg" alt="tuba"><br>Tuba</li>
                 <li><img src="images/piano.jpg" alt="piano"><br>Piano</li>
@@ -89,6 +91,7 @@
         <br><br>
         <div><br><br></div>
     </main>
+    </section>
 
     <section class="references">
         <h4>References</h4>
