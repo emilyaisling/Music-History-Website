@@ -49,7 +49,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $stmt->bind_param('sss', $_POST['username'], $password, $_POST['email']);
             $stmt->execute();
-            echo '<script>alert("You have successfully registered.");document.location="home.php"</script>';
+            echo '<script>alert("You have successfully registered.");document.location="index.php"</script>';
         }
         else
         {
