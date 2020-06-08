@@ -101,8 +101,6 @@ else if($load == false)
     <span class="stars"><?=str_repeat('&#9733;', round($comments_info['overall_rating']))?></span>
     <span class="total"><?=$comments_info['total_comments'], $display?> </span>
 </section>
-<?php endif ?>
-<?php if ($error == false): ?>
 <a href="#" class="write_comment_btn">Write Comment</a>
 <section class="write_comment">
     <form>
