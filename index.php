@@ -46,15 +46,15 @@ if (!isset($_SESSION['loggedin']))
         <br><br><br>
 
         <section class="slideshow">
-            <a id="r" href="/Website/renaissance.php"><img src="images/palestrinaCrop.jpg" class="slide"></a>
-            <a id="b" href="/Website/baroque.php"><img src="images/bachCrop.jpg" class="slide"></a>
-            <a id="b" href="/Website/baroque.php"><img src="images/vivaldiCrop.jpg" class="slide"></a>
-            <a id="c" href="/Website/classical.php"><img src="images/mozartCrop.jpg" class="slide"></a>
-            <a id="c" href="/Website/classical.php"><img src="images/Joseph-HaydnCrop.jpg" class="slide"></a>
-            <a id="ro" href="/Website/romantic.php"><img src="images/tchaikovskyCrop.jpg" class="slide"></a>
-            <a id="ro" href="/Website/romantic.php"><img src="images/berliozCrop.jpg" class="slide"></a>
-            <a id="t" href="/Website/twentiethcentury.php"><img src="images/schoenbergCrop.jpg" class="slide"></a>
-            <a id="t" href="/Website/twentiethcentury.php"><img src="images/stravinskyCrop.jpeg" class="slide"></a>
+            <a id="r" href="renaissance.php"><img src="images/palestrinaCrop.jpg" class="slide"></a>
+            <a id="b" href="baroque.php"><img src="images/bachCrop.jpg" class="slide"></a>
+            <a id="b" href="baroque.php"><img src="images/vivaldiCrop.jpg" class="slide"></a>
+            <a id="c" href="classical.php"><img src="images/mozartCrop.jpg" class="slide"></a>
+            <a id="c" href="classical.php"><img src="images/Joseph-HaydnCrop.jpg" class="slide"></a>
+            <a id="ro" href="romantic.php"><img src="images/tchaikovskyCrop.jpg" class="slide"></a>
+            <a id="ro" href="romantic.php"><img src="images/berliozCrop.jpg" class="slide"></a>
+            <a id="t" href="twentiethcentury.php"><img src="images/schoenbergCrop.jpg" class="slide"></a>
+            <a id="t" href="twentiethcentury.php"><img src="images/stravinskyCrop.jpeg" class="slide"></a>
         </section>
         <br>
         <h4>Click a composer to learn more about their era...</h4>
