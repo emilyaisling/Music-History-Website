@@ -85,7 +85,7 @@ if ($load == true)
     $comments_info = $stmt->fetch(PDO::FETCH_ASSOC);
     $display = $comments_info['total_comments'] > 1 ? ' comments' : ' comment';
 }
-if($error == false)
+else if($load == false)
 {
     $stmt = $pdo->prepare("SELECT TOP 1 * FROM Table ORDER BY id DESC");
     $stmt->execute();
