@@ -86,7 +86,7 @@ if ($load == true)
     $comments_info = $stmt->fetch(PDO::FETCH_ASSOC);
     $display = $comments_info['total_comments'] > 1 ? ' comments' : ' comment';
 }
-else if($load == false)
+elseif($load == false)
 {
     $stmt = $pdo->prepare("SELECT TOP 1 * FROM Table ORDER BY id DESC");
     $stmt->execute();
@@ -121,7 +121,7 @@ else if($load == false)
     <p class="contents"><?=htmlspecialchars($comment['content'], ENT_QUOTES)?></p>
 </section>
 <?php endforeach ?>
-<?php else: ?>
+<?php $load = false?>
+<?php elseif ($error == true): ?>
     <p class="error"><?php echo htmlspecialchars('Incorrect username.')?><p>
 <?php endif ?>
-<?php $load = false?>
