@@ -2,6 +2,7 @@
 session_start();
 date_default_timezone_set('GMT');
 $error = '';
+$load = true;
 
 $DATABASE_HOST = 'sql2.freesqldatabase.com';
 $DATABASE_USER = 'sql2346597';
@@ -73,7 +74,7 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
         echo 'Failed to prepare statement';
     }
 }
-else
+if ($load == true)
 {
     $stmt = $pdo->prepare('SELECT * FROM comments ORDER BY submit_date DESC');
     $stmt->execute();
@@ -83,6 +84,8 @@ else
     $stmt->execute();
     $comments_info = $stmt->fetch(PDO::FETCH_ASSOC);
     $display = $comments_info['total_comments'] > 1 ? ' comments' : ' comment';
+
+    $load = false;
 }
 if($error == false)
 {
