@@ -84,8 +84,6 @@ if ($load == true)
     $stmt->execute();
     $comments_info = $stmt->fetch(PDO::FETCH_ASSOC);
     $display = $comments_info['total_comments'] > 1 ? ' comments' : ' comment';
-
-    $load = false;
 }
 if($error == false)
 {
@@ -96,7 +94,7 @@ if($error == false)
 }
 ?>
 
-<?php if ($load == true): ?>
+<?php if ($error == false): ?>
 <section class="overall_rating">
     <span class="num"><?=number_format($comments_info['overall_rating'], 1)?></span>
     <span class="stars"><?=str_repeat('&#9733;', round($comments_info['overall_rating']))?></span>
@@ -122,6 +120,7 @@ if($error == false)
     <p class="contents"><?=htmlspecialchars($comment['content'], ENT_QUOTES)?></p>
 </section>
 <?php endforeach ?>
+<?php $load = false?>
 <?php else: ?>
     <p class="error"><?php echo htmlspecialchars('Incorrect username.')?><p>
 <?php endif ?>
