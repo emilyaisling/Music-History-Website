@@ -54,7 +54,6 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
             {
                 $user = $_SESSION['id'];
                 $stmt = $pdo->prepare("INSERT INTO comments (user_id, username, content, rating, submit_date) VALUES ($user,?,?,?,NOW())");
-                $content = $_POST['content'];
                 $stmt->execute([$_POST['username'], $_POST['content'], $_POST['rating']]);
                 $error = false;
                 echo 'Your comment has been submitted';
@@ -77,7 +76,7 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
 }
     if($error == false)
     {
-        $stmt = $pdo->prepare("SELECT * FROM comments WHERE content = $content");
+        $stmt = $pdo->prepare("SELECT TOP 1 * FROM Table ORDER BY id DESC");
         $stmt->execute();
         $comments = $stmt->fetch(PDO::FETCH_ASSOC);
 
