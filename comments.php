@@ -56,7 +56,6 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
                 $stmt = $pdo->prepare("INSERT INTO comments (user_id, username, content, rating, submit_date) VALUES ($user,?,?,?,NOW())");
                 $stmt->execute([$_POST['username'], $_POST['content'], $_POST['rating']]);
                 echo 'Your comment has been submitted';
-                header('Location: comments.html');
             }
             else
             {
@@ -73,6 +72,7 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
         echo 'Failed to prepare statement';
     }
 }
+header('Location: comments.html');
     if($error == false)
     {
         $stmt = $pdo->prepare('SELECT * FROM comments ORDER BY submit_date DESC');
