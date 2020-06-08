@@ -95,12 +95,14 @@ else if($load == false)
 }
 ?>
 
-<?php if ($error == false): ?>
+<?php if ($error == false && $load == true): ?>
 <section class="overall_rating">
     <span class="num"><?=number_format($comments_info['overall_rating'], 1)?></span>
     <span class="stars"><?=str_repeat('&#9733;', round($comments_info['overall_rating']))?></span>
     <span class="total"><?=$comments_info['total_comments'], $display?> </span>
 </section>
+<?php endif ?>
+<?php if ($error == false): ?>
 <a href="#" class="write_comment_btn">Write Comment</a>
 <section class="write_comment">
     <form>
