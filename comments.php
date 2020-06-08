@@ -96,7 +96,7 @@ if($error == false)
 }
 ?>
 
-<?php if ($error == false): ?>
+<?php if ($load == true): ?>
 <section class="overall_rating">
     <span class="num"><?=number_format($comments_info['overall_rating'], 1)?></span>
     <span class="stars"><?=str_repeat('&#9733;', round($comments_info['overall_rating']))?></span>
