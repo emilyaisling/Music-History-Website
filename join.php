@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-$DATABASE_HOST = 'remotemysql.com:3306';
-$DATABASE_USER = 'IAz9y1cPIk';
-$DATABASE_PASS = 'WSQcp8qrga9';
-$DATABASE_NAME = 'IAz9y1cPIk';
+$DATABASE_HOST = 'sql2.freesqldatabase.com';
+$DATABASE_USER = 'sql2346597';
+$DATABASE_PASS = 'rV4*bD1*';
+$DATABASE_NAME = 'sql2346597';
 
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) 

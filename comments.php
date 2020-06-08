@@ -3,10 +3,10 @@ session_start();
 date_default_timezone_set('GMT');
 $error = false;
 
-$DATABASE_HOST = 'remotemysql.com:3306';
-$DATABASE_USER = 'IAz9y1cPIk';
-$DATABASE_PASS = 'WSQcp8qrga9';
-$DATABASE_NAME = 'IAz9y1cPIk';
+$DATABASE_HOST = 'sql2.freesqldatabase.com';
+$DATABASE_USER = 'sql2346597';
+$DATABASE_PASS = 'rV4*bD1*';
+$DATABASE_NAME = 'sql2346597';
 
 try 
 {
