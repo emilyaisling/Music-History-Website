@@ -19,11 +19,11 @@ if (!isset($_SESSION['loggedin']))
 
     <nav class="home-nav">
         <ul>
-            <li><a id="r" href="/Website/renaissance.php">Renaissance</a></li>
-            <li><a id="b" href="/Website/baroque.php">Baroque</a></li>
-            <li><a id="c" href="/Website/classical.php">Classical</a></li>
-            <li><a id="ro" href="/Website/romantic.php">Romantic</a></li>
-            <li><a id="t" href="/Website/twentiethcentury.php">Twentieth Century</a></li>
+            <li><a id="r" href="/renaissance.php">Renaissance</a></li>
+            <li><a id="b" href="/baroque.php">Baroque</a></li>
+            <li><a id="c" href="/classical.php">Classical</a></li>
+            <li><a id="ro" href="/romantic.php">Romantic</a></li>
+            <li><a id="t" href="/twentiethcentury.php">Twentieth Century</a></li>
         </ul>
     </nav>
     <section class="contain">

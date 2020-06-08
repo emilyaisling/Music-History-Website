@@ -11,11 +11,11 @@
 
     <nav class="home-nav">
         <ul>
-            <li><a href="/Website/home.php">Home</a></li>
-            <li><a href="/Website/renaissance.php">Renaissance</a></li>
-            <li><a href="/Website/classical.php">Classical</a></li>
-            <li><a href="/Website/romantic.php">Romantic</a></li>
-            <li><a href="/Website/twentiethcentury.php">Twentieth Century</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="renaissance.php">Renaissance</a></li>
+            <li><a href="classical.php">Classical</a></li>
+            <li><a href="romantic.php">Romantic</a></li>
+            <li><a href="twentiethcentury.php">Twentieth Century</a></li>
         </ul>
     </nav>
 
