@@ -121,7 +121,7 @@ else if($load == false)
     <p class="contents"><?=htmlspecialchars($comment['content'], ENT_QUOTES)?></p>
 </section>
 <?php endforeach ?>
-<?php $load = false?>
 <?php else: ?>
     <p class="error"><?php echo htmlspecialchars('Incorrect username.')?><p>
 <?php endif ?>
+<?php $load = false?>
