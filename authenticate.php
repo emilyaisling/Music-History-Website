@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$DATABASE_HOST = 'sql2.freesqldatabase.com';
+$DATABASE_HOST = 'sql2.freesqldatabase.com:3306';
 $DATABASE_USER = 'sql2346597';
 $DATABASE_PASS = 'rV4*bD1*';
 $DATABASE_NAME = 'sql2346597';
@@ -34,7 +34,7 @@ if ($stmt = $con->prepare('SELECT id, password, email FROM accounts WHERE userna
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
             $_SESSION['email'] = $email;
-            header('Location: home.php');
+            header('Location: index.php');
         } 
         else 
         {
