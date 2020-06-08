@@ -72,9 +72,9 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
         echo 'Failed to prepare statement';
     }
 }
-header('Location: comments.html');
     if($error == false)
     {
+        header('Location: comments.html');
         $stmt = $pdo->prepare('SELECT * FROM comments ORDER BY submit_date DESC');
         $stmt->execute();
         $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
