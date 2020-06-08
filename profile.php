@@ -5,10 +5,10 @@ if (!isset($_SESSION['loggedin']))
 	header('Location: index.html');
 	exit;
 }
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'emilyaisling';
-$DATABASE_PASS = 'WesternArtMusic1';
-$DATABASE_NAME = 'phplogin';
+$DATABASE_HOST = 'sql2.freesqldatabase.com';
+$DATABASE_USER = 'sql2346597';
+$DATABASE_PASS = 'rV4*bD1*';
+$DATABASE_NAME = 'sql2346597';
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) 
 {
@@ -38,7 +38,7 @@ $stmt->close();
         <h1>Music History</h1>
         <section class='buttons'>
             <br>
-            <a href="home.php"><i class="fas fa-home"></i>Home</a>
+            <a href="index.php"><i class="fas fa-home"></i>Home</a>
             <a href="comments.html"><i class="fas fa-comment"></i>Comments</a>
             <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
         </section>
