@@ -1,7 +1,7 @@
 <?php
 session_start();
 date_default_timezone_set('GMT');
-$error = false;
+$error = '';
 
 $DATABASE_HOST = 'sql2.freesqldatabase.com';
 $DATABASE_USER = 'sql2346597';
@@ -55,7 +55,9 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
                 $user = $_SESSION['id'];
                 $stmt = $pdo->prepare("INSERT INTO comments (user_id, username, content, rating, submit_date) VALUES ($user,?,?,?,NOW())");
                 $stmt->execute([$_POST['username'], $_POST['content'], $_POST['rating']]);
+                $error = false;
                 echo 'Your comment has been submitted';
+                header('Location: comments.html');
             }
             else
             {
@@ -74,7 +76,6 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
 }
     if($error == false)
     {
-        header('Location: comments.html');
         $stmt = $pdo->prepare('SELECT * FROM comments ORDER BY submit_date DESC');
         $stmt->execute();
         $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
