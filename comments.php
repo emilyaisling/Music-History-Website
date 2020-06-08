@@ -73,13 +73,8 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
         echo 'Failed to prepare statement';
     }
 }
-    if($error == false)
-    {
-        $stmt = $pdo->prepare("SELECT TOP 1 * FROM Table ORDER BY id DESC");
-        $stmt->execute();
-        $comments = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    }
+else
+{
     $stmt = $pdo->prepare('SELECT * FROM comments ORDER BY submit_date DESC');
     $stmt->execute();
     $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -88,6 +83,14 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
     $stmt->execute();
     $comments_info = $stmt->fetch(PDO::FETCH_ASSOC);
     $display = $comments_info['total_comments'] > 1 ? ' comments' : ' comment';
+}
+if($error == false)
+{
+    $stmt = $pdo->prepare("SELECT TOP 1 * FROM Table ORDER BY id DESC");
+    $stmt->execute();
+    $comments = $stmt->fetch(PDO::FETCH_ASSOC);
+
+}
 ?>
 
 <?php if ($error == false): ?>
