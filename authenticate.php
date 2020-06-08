@@ -1,10 +1,10 @@
 <?php
 session_start();
 
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'emilyaisling';
-$DATABASE_PASS = 'WesternArtMusic1';
-$DATABASE_NAME = 'phplogin';
+$DATABASE_HOST = 'remotemysql.com:3306';
+$DATABASE_USER = 'IAz9y1cPIk';
+$DATABASE_PASS = 'WSQcp8qrga9';
+$DATABASE_NAME = 'IAz9y1cPIk';
 
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) 

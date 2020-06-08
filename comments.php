@@ -3,10 +3,10 @@ session_start();
 date_default_timezone_set('GMT');
 $error = false;
 
-$DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'emilyaisling';
-$DATABASE_PASS = 'WesternArtMusic1';
-$DATABASE_NAME = 'phplogin';
+$DATABASE_HOST = 'remotemysql.com:3306';
+$DATABASE_USER = 'IAz9y1cPIk';
+$DATABASE_PASS = 'WSQcp8qrga9';
+$DATABASE_NAME = 'IAz9y1cPIk';
 
 try 
 {
