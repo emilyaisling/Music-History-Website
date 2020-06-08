@@ -75,7 +75,7 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
         echo 'Failed to prepare statement';
     }
 }
-if ($error == true)
+if ($load == true)
 {
     $stmt = $pdo->prepare('SELECT * FROM comments ORDER BY submit_date DESC');
     $stmt->execute();
@@ -86,7 +86,7 @@ if ($error == true)
     $comments_info = $stmt->fetch(PDO::FETCH_ASSOC);
     $display = $comments_info['total_comments'] > 1 ? ' comments' : ' comment';
 }
-elseif($load == false)
+elseif($error == false)
 {
     $stmt = $pdo->prepare("SELECT TOP 1 * FROM Table ORDER BY id DESC");
     $stmt->execute();
