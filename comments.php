@@ -55,8 +55,8 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
                 $user = $_SESSION['id'];
                 $stmt = $pdo->prepare("INSERT INTO comments (user_id, username, content, rating, submit_date) VALUES ($user,?,?,?,NOW())");
                 $stmt->execute([$_POST['username'], $_POST['content'], $_POST['rating']]);
-                $error = false;
                 echo 'Your comment has been submitted';
+                header('Location: comments.html');
             }
             else
             {
