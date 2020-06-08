@@ -76,16 +76,19 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
 }
     if($error == false)
     {
-        $stmt = $pdo->prepare('SELECT * FROM comments ORDER BY submit_date DESC');
+        $stmt = $pdo->prepare("SELECT * FROM comments WHERE content = $_POST['content]");
         $stmt->execute();
-        $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        $stmt = $pdo->prepare('SELECT AVG(rating) AS overall_rating, COUNT(*) AS total_comments FROM comments');
-        $stmt->execute();
-        $comments_info = $stmt->fetch(PDO::FETCH_ASSOC);
-        $display = $comments_info['total_comments'] > 1 ? ' comments' : ' comment';
+        $comments = $stmt->fetch(PDO::FETCH_ASSOC);
 
     }
+    $stmt = $pdo->prepare('SELECT * FROM comments ORDER BY submit_date DESC');
+    $stmt->execute();
+    $comments = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $stmt = $pdo->prepare('SELECT AVG(rating) AS overall_rating, COUNT(*) AS total_comments FROM comments');
+    $stmt->execute();
+    $comments_info = $stmt->fetch(PDO::FETCH_ASSOC);
+    $display = $comments_info['total_comments'] > 1 ? ' comments' : ' comment';
 ?>
 
 <?php if ($error == false): ?>
