@@ -75,7 +75,7 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
         echo 'Failed to prepare statement';
     }
 }
-if ($load == true)
+if ($error == true)
 {
     $stmt = $pdo->prepare('SELECT * FROM comments ORDER BY submit_date DESC');
     $stmt->execute();
