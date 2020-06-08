@@ -57,7 +57,7 @@ if (isset($_POST['username'], $_POST['rating'], $_POST['content']))
                 $stmt->execute([$_POST['username'], $_POST['content'], $_POST['rating']]);
                 $error = false;
                 echo 'Your comment has been submitted';
-                header('Location: comments.html');
+                header('Location: comments.php');
             }
             else
             {
