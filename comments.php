@@ -3,6 +3,7 @@ session_start();
 date_default_timezone_set('GMT');
 $error = '';
 $load = true;
+$rewrite == false;
 
 $DATABASE_HOST = 'sql2.freesqldatabase.com';
 $DATABASE_USER = 'sql2346597';
@@ -102,6 +103,9 @@ elseif($error == false)
     <span class="total"><?=$comments_info['total_comments'], $display?> </span>
 </section>
 <a href="#" class="write_comment_btn">Write Comment</a>
+<?php endif ?>
+
+<?php if ($rewrite == true || $error == false): ?>
 <section class="write_comment">
     <form>
         <input type="text" name="username" placeholder="Username" required>
@@ -110,7 +114,8 @@ elseif($error == false)
         <button type="submit">Post Comment</button>
     </form>
 </section>
-
+<?php endif ?>
+<?php if ($error == false && $load == true): ?>
 <?php foreach ($comments as $comment): ?>
 <section class="comment">
     <h3 class="username"><?=htmlspecialchars($comment['username'], ENT_QUOTES)?></h3>
@@ -124,5 +129,5 @@ elseif($error == false)
 <?php $load = false?>
 <?php elseif ($error == true): ?>
     <p class="error"><?php echo htmlspecialchars('Incorrect username.')?><p>
-    <?php $error = false; ?>
+    <?php $rewrite = true; ?>
 <?php endif ?>
