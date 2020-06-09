@@ -123,6 +123,5 @@ elseif($error == false)
 <?php endforeach ?>
 <?php $load = false?>
 <?php elseif ($error == true): ?>
-    <p class="error"><?php echo htmlspecialchars('Incorrect username.')?><p>
-    <?php header('Location: comments.php')?>
+    <p class="error"><?php echo htmlspecialchars('Incorrect username, please refresh.')?><p>
 <?php endif ?>
