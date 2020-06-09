@@ -125,12 +125,8 @@ elseif($error == false)
 <?php elseif ($error == true): ?>
     <p class="error"><?php echo htmlspecialchars('Incorrect username, please refresh.')?><p>
     <script>
-    document.querySelector(".comments .write_comment_btn").onclick = event =>
-    {
-        event.preventDefault();
         document.querySelector(".comments .write_comment").style.display = 'block';
         document.querySelector(".comments .write_comment input[name='name']").focus();
-    };
     </script>
 <?php endif ?>
 
