@@ -102,7 +102,7 @@ elseif($error == false)
     <span class="total"><?=$comments_info['total_comments'], $display?> </span>
 </section>
 <a href="#" class="write_comment_btn">Write Comment</a>
-<section class="write_comment" id="writeForm">
+<section class="write_comment">
     <form>
         <input type="text" name="username" placeholder="Username" required>
         <input type="number" name="rating" min="1" max="5" placeholder="Rating (1-5)" required>
@@ -124,7 +124,13 @@ elseif($error == false)
 <?php $load = false?>
 <?php elseif ($error == true): ?>
     <p class="error"><?php echo htmlspecialchars('Incorrect username, please refresh.')?><p>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>$("#writeForm").load("comments.php #writeForm");</script>
+    <script>
+    document.querySelector(".comments .write_comment_btn").onclick = event =>
+    {
+        event.preventDefault();
+        document.querySelector(".comments .write_comment").style.display = 'block';
+        document.querySelector(".comments .write_comment input[name='name']").focus();
+    };
+    </script>
 <?php endif ?>
 
