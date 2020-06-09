@@ -124,6 +124,7 @@ elseif($error == false)
 <?php $load = false?>
 <?php elseif ($error == true): ?>
     <p class="error"><?php echo htmlspecialchars('Incorrect username, please refresh.')?><p>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>$("#writeForm").load("comments.php #writeForm");</script>
 <?php endif ?>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
