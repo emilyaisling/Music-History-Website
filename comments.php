@@ -4,10 +4,10 @@ date_default_timezone_set('GMT');
 $error = '';
 $load = true;
 
-$DATABASE_HOST = 'sql2.freesqldatabase.com';
-$DATABASE_USER = 'sql2346597';
-$DATABASE_PASS = 'rV4*bD1*';
-$DATABASE_NAME = 'sql2346597';
+$DATABASE_HOST = 'u3r5w4ayhxzdrw87.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
+$DATABASE_USER = 'lolhgl9tjsf486gu';
+$DATABASE_PASS = 'asuakvmh3s3oeiiu';
+$DATABASE_NAME = 'wxqnvf4km8yjpa2z';
 
 try 
 {
